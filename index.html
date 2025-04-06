@@ -98,7 +98,12 @@
             margin-bottom: 2rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transform: translateY(0);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            opacity: 1;
+        }
+
+        section.faded {
+            opacity: 0.3;
         }
 
         section:hover {
@@ -120,11 +125,24 @@
             background: var(--bg-color);
             border-left: 4px solid var(--primary-color);
             transition: all 0.3s ease;
+            cursor: pointer;
         }
 
         .experience-item:hover {
             transform: translateX(5px);
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .experience-item.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .experience-item.active .position-title,
+        .experience-item.active .employer,
+        .experience-item.active .job-period,
+        .experience-item.active .job-location {
+            color: white;
         }
 
         .position-title {
@@ -706,6 +724,37 @@
 
         // Observe skills section
         observer.observe(document.getElementById('skills'));
+
+        // Add work experience hover effects
+        const workExperienceItems = document.querySelectorAll('.experience-item');
+        const sections = document.querySelectorAll('section');
+        const workExperienceSection = document.getElementById('work-experience');
+
+        workExperienceItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                sections.forEach(section => {
+                    if (section !== workExperienceSection) {
+                        section.classList.add('faded');
+                    }
+                });
+                workExperienceItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.style.opacity = '0.5';
+                    }
+                });
+                item.classList.add('active');
+            });
+
+            item.addEventListener('mouseleave', () => {
+                sections.forEach(section => {
+                    section.classList.remove('faded');
+                });
+                workExperienceItems.forEach(otherItem => {
+                    otherItem.style.opacity = '1';
+                });
+                item.classList.remove('active');
+            });
+        });
     </script>
 </body>
 </html>
