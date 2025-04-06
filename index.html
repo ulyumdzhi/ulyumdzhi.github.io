@@ -10,18 +10,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #4CAF50;
-            --secondary-color: #2E7D32;
+            --primary-color: #5e9561;
+            --accent-color: #bedecdb6;
+            --secondary-color: #258a2a;
             --text-color: #333;
             --bg-color: #f9f9f9;
             --card-bg: #fff;
             --header-bg: linear-gradient(90deg, #4CAF50, #2E7D32);
-            --transition: all 0.3s ease;
+            --transition: all 0.1s ease;
         }
 
         [data-theme="dark"] {
-            --primary-color: #66BB6A;
-            --secondary-color: #43A047;
+            --primary-color: #415e42;
+            --accent-color: #adf0bda1;
+            --secondary-color: #406e43;
             --text-color: #e1e1e1;
             --bg-color: #1a1a1a;
             --card-bg: #2d2d2d;
@@ -134,15 +136,15 @@
         }
 
         .experience-item.active {
-            background: var(--primary-color);
-            color: white;
+            background: var(--accent-color);
+            color: rgb(0, 0, 0);
         }
 
         .experience-item.active .position-title,
         .experience-item.active .employer,
         .experience-item.active .job-period,
         .experience-item.active .job-location {
-            color: white;
+            color: rgb(1, 0, 0);
         }
 
         .position-title {
@@ -187,7 +189,7 @@
 
         .experience-item strong {
             color: var(--primary-color);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .experience-item em {
