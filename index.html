@@ -40,7 +40,7 @@
             --coral-soft: #ffd6cf;
             --lavender: #b9afff;
             --lavender-soft: #ece9ff;
-            --cobalt: #5368ff;
+            --cobalt: #4054e6;
             --yellow: #f4d64e;
             --page-width: 1160px;
             --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -208,12 +208,8 @@
 
         .hero {
             position: relative;
-            display: grid;
-            min-height: 704px;
             overflow: hidden;
-            place-items: center;
-            padding: 108px 48px 128px;
-            text-align: center;
+            padding: 104px 42px 82px;
             border-bottom: 1px solid var(--line);
             isolation: isolate;
         }
@@ -253,22 +249,17 @@
         }
 
         .hero-content {
-            width: min(790px, 100%);
+            min-width: 0;
         }
 
-        .hero-mark {
+        .hero-inner {
+            position: relative;
+            z-index: 1;
             display: grid;
-            width: 42px;
-            height: 42px;
-            margin: 0 auto 31px;
-            place-items: center;
-            color: var(--white);
-            background: var(--ink);
-            border-radius: 12px;
-            font-family: var(--mono);
-            font-size: 11px;
-            font-weight: 500;
-            box-shadow: 0 13px 30px rgba(17, 18, 20, 0.16);
+            width: 100%;
+            align-items: end;
+            grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
+            gap: clamp(48px, 7vw, 88px);
         }
 
         .eyebrow {
@@ -293,11 +284,12 @@
         }
 
         h1 {
-            margin-bottom: 28px;
-            font-size: clamp(4rem, 8.2vw, 7.4rem);
+            max-width: 800px;
+            margin-bottom: 30px;
+            font-size: clamp(4.4rem, 7.8vw, 7rem);
             font-weight: 600;
-            letter-spacing: -0.075em;
-            line-height: 0.91;
+            letter-spacing: -0.06em;
+            line-height: 0.94;
         }
 
         h1 span {
@@ -306,8 +298,8 @@
         }
 
         .hero-copy {
-            max-width: 660px;
-            margin: 0 auto 31px;
+            max-width: 620px;
+            margin: 0 0 31px;
             color: #42454b;
             font-size: clamp(1.04rem, 1.8vw, 1.22rem);
             line-height: 1.58;
@@ -316,7 +308,7 @@
         .hero-actions {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: flex-start;
             gap: 10px;
             margin-bottom: 32px;
         }
@@ -357,6 +349,93 @@
             font-size: 10px;
             letter-spacing: 0.03em;
             text-transform: uppercase;
+        }
+
+        .hero-profile {
+            position: relative;
+            overflow: hidden;
+            padding: 27px;
+            background: var(--mint-soft);
+            border: 1px solid var(--ink);
+            border-radius: 18px;
+            box-shadow: 0 8px 0 rgba(17, 18, 20, 0.10);
+        }
+
+        .hero-profile::after {
+            position: absolute;
+            right: -34px;
+            bottom: -38px;
+            width: 126px;
+            height: 126px;
+            content: '';
+            background: rgba(83, 104, 255, 0.12);
+            border: 1px solid rgba(17, 18, 20, 0.22);
+            border-radius: 50%;
+        }
+
+        .profile-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 70px;
+            font-family: var(--mono);
+            font-size: 9px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .profile-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .profile-status::before {
+            width: 7px;
+            height: 7px;
+            content: '';
+            background: #3ecf8e;
+            border: 1px solid var(--ink);
+            border-radius: 50%;
+        }
+
+        .hero-profile h2 {
+            margin-bottom: 13px;
+            font-size: clamp(1.8rem, 3vw, 2.45rem);
+            font-weight: 600;
+            letter-spacing: -0.055em;
+            line-height: 1.02;
+        }
+
+        .profile-company {
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            margin-bottom: 24px;
+            color: var(--cobalt);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .profile-focus {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .profile-focus li {
+            padding: 6px 9px;
+            background: rgba(255, 255, 255, 0.62);
+            border: 1px solid rgba(17, 18, 20, 0.42);
+            border-radius: 999px;
+            font-family: var(--mono);
+            font-size: 9px;
         }
 
         .module-grid {
@@ -541,12 +620,12 @@
         }
 
         .feature-head h2 {
-            max-width: 760px;
+            max-width: 680px;
             margin-bottom: 0;
-            font-size: clamp(3.1rem, 6.7vw, 6.25rem);
+            font-size: clamp(3rem, 5.5vw, 5.15rem);
             font-weight: 600;
-            letter-spacing: -0.075em;
-            line-height: 0.94;
+            letter-spacing: -0.065em;
+            line-height: 0.96;
         }
 
         .feature-head p {
@@ -558,6 +637,7 @@
         .system-visual {
             position: relative;
             overflow: hidden;
+            aspect-ratio: 16 / 9;
             background: var(--coral);
             border: 1px solid var(--ink);
             border-radius: 20px;
@@ -566,11 +646,25 @@
         .system-visual picture,
         .system-visual img {
             width: 100%;
+            height: 100%;
+        }
+
+        .system-visual picture {
+            display: block;
         }
 
         .system-visual img {
-            aspect-ratio: 3 / 2;
             object-fit: cover;
+            object-position: center 62%;
+        }
+
+        .feature-figure {
+            display: grid;
+            width: min(920px, 100%);
+            margin: 0 auto;
+            align-items: stretch;
+            grid-template-columns: minmax(0, 1fr) 235px;
+            gap: 18px;
         }
 
         .visual-tag {
@@ -592,16 +686,32 @@
 
         .visual-caption {
             display: grid;
-            padding: 18px 4px 3px;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 20px;
+            padding: 6px 0;
+            grid-template-columns: 1fr;
+            gap: 0;
             font-family: var(--mono);
             font-size: 10px;
             text-transform: uppercase;
         }
 
         .visual-caption span {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 18px 20px;
             color: var(--faint);
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-bottom: 0;
+        }
+
+        .visual-caption span:first-child {
+            border-radius: 14px 14px 0 0;
+        }
+
+        .visual-caption span:last-child {
+            border-bottom: 1px solid var(--line);
+            border-radius: 0 0 14px 14px;
         }
 
         .visual-caption strong {
@@ -1025,6 +1135,12 @@
         }
 
         @media (max-width: 960px) {
+            .hero-inner {
+                align-items: stretch;
+                grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+                gap: 38px;
+            }
+
             .module-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -1071,8 +1187,7 @@
             }
 
             .hero {
-                min-height: 650px;
-                padding: 90px 20px 108px;
+                padding: 74px 20px 64px;
             }
 
             .hero::before {
@@ -1080,13 +1195,29 @@
                 width: 760px;
             }
 
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 42px;
+            }
+
             h1 {
-                font-size: clamp(3.7rem, 18vw, 5.8rem);
+                max-width: 100%;
+                font-size: clamp(3.45rem, 15.2vw, 4.75rem);
+                letter-spacing: -0.048em;
+                line-height: 0.98;
             }
 
             .hero-actions {
                 align-items: stretch;
                 flex-direction: column;
+            }
+
+            .hero-profile {
+                padding: 24px;
+            }
+
+            .profile-meta {
+                margin-bottom: 50px;
             }
 
             .module-grid,
@@ -1129,20 +1260,43 @@
 
             .feature-head h2,
             .section-heading h2 {
-                font-size: clamp(2.9rem, 14vw, 4.7rem);
+                font-size: clamp(2.75rem, 12.5vw, 4.5rem);
+            }
+
+            .feature-head {
+                margin-bottom: 28px;
+            }
+
+            .feature-figure {
+                grid-template-columns: 1fr;
+                gap: 12px;
             }
 
             .system-visual {
+                aspect-ratio: 16 / 10;
                 border-radius: 14px;
             }
 
-            .system-visual img {
-                aspect-ratio: 4 / 3;
+            .visual-caption {
+                padding: 0;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
             }
 
-            .visual-caption {
-                grid-template-columns: 1fr;
-                gap: 12px;
+            .visual-caption span {
+                min-width: 0;
+                padding: 13px 10px;
+                border-right: 0;
+                border-bottom: 1px solid var(--line);
+                font-size: 8px;
+            }
+
+            .visual-caption span:first-child {
+                border-radius: 12px 0 0 12px;
+            }
+
+            .visual-caption span:last-child {
+                border-right: 1px solid var(--line);
+                border-radius: 0 12px 12px 0;
             }
 
             .stack-column {
@@ -1233,16 +1387,31 @@
 
     <main id="main" class="canvas">
         <section class="hero" id="top">
-            <div class="hero-content">
-                <span class="hero-mark">UU</span>
-                <p class="eyebrow">Solutions Engineering Team Lead</p>
-                <h1>Complex AI.<span>Clear systems.</span></h1>
-                <p class="hero-copy">I design and ship reliable AI, agent and data solutions — from the first architecture sketch to production — and help teams move through the hard parts with confidence.</p>
-                <div class="hero-actions">
-                    <a class="button button-dark" href="mailto:ulyumdzhiev@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a>
-                    <a class="button button-light" href="#experience">View experience <span aria-hidden="true">↓</span></a>
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <p class="eyebrow">Uliumdzhi Uliumdzhiev</p>
+                    <h1>AI systems.<span>Made to work.</span></h1>
+                    <p class="hero-copy">Solutions Engineering Team Lead at Toloka. I turn ambiguous AI and data problems into reliable products — from architecture and evaluation to production.</p>
+                    <div class="hero-actions">
+                        <a class="button button-dark" href="mailto:ulyumdzhiev@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a>
+                        <a class="button button-light" href="#experience">View experience <span aria-hidden="true">↓</span></a>
+                    </div>
+                    <p class="hero-location">Belgrade, Serbia · CET / CEST · AI · data · product</p>
                 </div>
-                <p class="hero-location">Belgrade, Serbia · CET / CEST · Working across AI, data and product</p>
+
+                <aside class="hero-profile" aria-label="Current role">
+                    <div class="profile-meta">
+                        <span>2024 — now</span>
+                        <span class="profile-status">Current role</span>
+                    </div>
+                    <h2>Solutions Engineering Team Lead</h2>
+                    <a class="profile-company" href="https://toloka.ai" target="_blank" rel="noopener noreferrer">Toloka ↗</a>
+                    <ul class="profile-focus" aria-label="Current focus areas">
+                        <li>Agentic systems</li>
+                        <li>LLM evaluation</li>
+                        <li>Solution architecture</li>
+                    </ul>
+                </aside>
             </div>
         </section>
 
@@ -1284,7 +1453,7 @@
                 <h2>Purpose-built, not patched together.</h2>
                 <p>Good AI products make every module understandable: data, models, orchestration, evaluation, operations and the people in the loop.</p>
             </div>
-            <figure>
+            <figure class="feature-figure">
                 <div class="system-visual">
                     <span class="visual-tag">System anatomy · 01</span>
                     <picture>
