@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Uliumdzhi Uliumdzhiev — Solutions Engineering Team Lead building reliable AI, agent and data systems.">
+    <meta name="description" content="Uliumdzhi Uliumdzhiev — Senior Solutions Engineer and Technical Team Lead building reliable AI, agent and data systems.">
     <meta name="theme-color" content="#f7f7f5">
-    <meta property="og:title" content="Uliumdzhi Uliumdzhiev — Solutions Engineer">
+    <meta property="og:title" content="Uliumdzhi Uliumdzhiev — Senior Solutions Engineer">
     <meta property="og:description" content="Complex AI. Clear systems. Useful products.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ulmji.com/">
@@ -14,10 +14,10 @@
     <meta property="og:image:height" content="1024">
     <meta property="og:image:alt" content="A modular industrial-design visualization of an AI system">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Uliumdzhi Uliumdzhiev — Solutions Engineer">
+    <meta name="twitter:title" content="Uliumdzhi Uliumdzhiev — Senior Solutions Engineer">
     <meta name="twitter:description" content="Complex AI. Clear systems. Useful products.">
     <meta name="twitter:image" content="https://ulmji.com/assets/ai-system.png">
-    <title>Uliumdzhi Uliumdzhiev — Solutions Engineer</title>
+    <title>Uliumdzhi Uliumdzhiev — Senior Solutions Engineer</title>
     <link rel="canonical" href="https://ulmji.com/">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0,0,64,64'%3E%3Crect width='64' height='64' rx='16' fill='%23111214'/%3E%3Cpath d='M32,16L48,32L32,48L16,32Z' fill='%23f7f7f5'/%3E%3Cpath d='M32,24L40,32L32,40L24,32Z' fill='%23111214'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -606,6 +606,207 @@
             color: var(--faint);
         }
 
+        .cases {
+            padding: 94px 42px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .cases-grid {
+            display: grid;
+            overflow: hidden;
+            background: var(--line);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 1px;
+        }
+
+        .case-card {
+            position: relative;
+            display: flex;
+            min-height: 370px;
+            overflow: hidden;
+            padding: 32px;
+            flex-direction: column;
+            background: var(--white);
+            grid-column: span 3;
+        }
+
+        .case-featured {
+            display: grid;
+            min-height: 420px;
+            color: var(--white);
+            background: var(--ink);
+            grid-column: 1 / -1;
+            grid-template-columns: minmax(0, 1.15fr) minmax(390px, 0.85fr);
+            gap: 54px;
+        }
+
+        .case-third {
+            min-height: 340px;
+            grid-column: span 2;
+        }
+
+        .case-body {
+            display: flex;
+            min-width: 0;
+            flex-direction: column;
+        }
+
+        .case-toloka { background: var(--white); }
+        .case-kidskey { background: var(--coral-soft); }
+        .case-emergency { color: var(--white); background: var(--cobalt); }
+        .case-raifhack { background: var(--lavender-soft); }
+        .case-elbrus { background: var(--mint-soft); }
+
+        .case-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 72px;
+            color: var(--faint);
+            font-family: var(--mono);
+            font-size: 9px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .case-featured .case-meta {
+            color: #b7bac1;
+        }
+
+        .case-kidskey .case-meta {
+            color: #55585f;
+        }
+
+        .case-emergency .case-meta {
+            color: var(--white);
+        }
+
+        .case-card h3 {
+            max-width: 590px;
+            margin-bottom: 18px;
+            font-size: clamp(2rem, 3.7vw, 3.45rem);
+            font-weight: 600;
+            letter-spacing: -0.058em;
+            line-height: 1.01;
+        }
+
+        .case-third h3 {
+            font-size: clamp(1.75rem, 2.8vw, 2.45rem);
+        }
+
+        .case-card p {
+            max-width: 600px;
+            margin-bottom: 24px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .case-featured p {
+            color: #d3d5da;
+        }
+
+        .case-emergency p {
+            color: var(--white);
+        }
+
+        .case-link {
+            display: inline-flex;
+            width: fit-content;
+            align-items: center;
+            gap: 6px;
+            margin-top: auto;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .case-link:hover,
+        .case-link:focus-visible {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .case-card:not(.case-featured) .case-link {
+            margin-top: 22px;
+        }
+
+        .case-metrics {
+            display: grid;
+            margin: 0;
+            padding: 0;
+            align-self: end;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1px;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 14px;
+            list-style: none;
+        }
+
+        .case-metrics li {
+            min-width: 0;
+            padding: 20px 16px;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .case-metrics li:first-child {
+            border-radius: 13px 0 0 13px;
+        }
+
+        .case-metrics li:last-child {
+            border-radius: 0 13px 13px 0;
+        }
+
+        .case-metrics strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: clamp(2rem, 4vw, 3.25rem);
+            font-weight: 600;
+            letter-spacing: -0.06em;
+            line-height: 1;
+        }
+
+        .case-metrics span {
+            display: block;
+            color: #c6c8ce;
+            font-family: var(--mono);
+            font-size: 8px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .case-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: auto;
+        }
+
+        .case-stats span {
+            padding: 7px 9px;
+            background: rgba(255, 255, 255, 0.68);
+            border: 1px solid rgba(17, 18, 20, 0.3);
+            border-radius: 999px;
+            font-family: var(--mono);
+            font-size: 8px;
+            text-transform: uppercase;
+        }
+
+        .case-emergency .case-stats span {
+            background: rgba(255, 255, 255, 0.13);
+            border-color: rgba(255, 255, 255, 0.42);
+        }
+
+        .cases-note {
+            margin: 18px 0 0;
+            color: var(--faint);
+            font-family: var(--mono);
+            font-size: 9px;
+        }
+
         .feature {
             padding: 72px 42px 42px;
             border-bottom: 1px solid var(--line);
@@ -1141,6 +1342,21 @@
                 gap: 38px;
             }
 
+            .cases-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .case-featured {
+                grid-column: 1 / -1;
+                grid-template-columns: 1fr;
+                gap: 38px;
+            }
+
+            .case-card:not(.case-featured),
+            .case-third {
+                grid-column: span 1;
+            }
+
             .module-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -1254,8 +1470,42 @@
             }
 
             .feature,
+            .cases,
             .section {
                 padding: 72px 20px;
+            }
+
+            .cases-grid {
+                border-radius: 14px;
+                grid-template-columns: 1fr;
+            }
+
+            .case-card,
+            .case-featured,
+            .case-third {
+                min-height: 340px;
+                padding: 27px 24px;
+                grid-column: 1;
+            }
+
+            .case-featured {
+                gap: 32px;
+            }
+
+            .case-meta {
+                margin-bottom: 52px;
+            }
+
+            .case-metrics {
+                align-self: end;
+            }
+
+            .case-metrics li {
+                padding: 16px 10px;
+            }
+
+            .case-metrics strong {
+                font-size: 2.25rem;
             }
 
             .feature-head h2,
@@ -1377,7 +1627,7 @@
                 <span>Uliumdzhi</span>
             </a>
             <div class="nav-links">
-                <a href="#work">Work</a>
+                <a href="#cases">Cases</a>
                 <a href="#stack">Stack</a>
                 <a href="#experience">Experience</a>
                 <a class="nav-cta" href="#contact">Let's talk</a>
@@ -1391,7 +1641,7 @@
                 <div class="hero-content">
                     <p class="eyebrow">Uliumdzhi Uliumdzhiev</p>
                     <h1>AI systems.<span>Made to work.</span></h1>
-                    <p class="hero-copy">Solutions Engineering Team Lead at Toloka. I turn ambiguous AI and data problems into reliable products — from architecture and evaluation to production.</p>
+                    <p class="hero-copy">Senior Solutions Engineer and Technical Team Lead at Toloka. I turn ambiguous AI and data problems into reliable products — from architecture and evaluation to production.</p>
                     <div class="hero-actions">
                         <a class="button button-dark" href="mailto:ulyumdzhiev@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a>
                         <a class="button button-light" href="#experience">View experience <span aria-hidden="true">↓</span></a>
@@ -1404,7 +1654,7 @@
                         <span>2024 — now</span>
                         <span class="profile-status">Current role</span>
                     </div>
-                    <h2>Solutions Engineering Team Lead</h2>
+                    <h2>Senior Solutions Engineer &amp; Technical Team Lead</h2>
                     <a class="profile-company" href="https://toloka.ai" target="_blank" rel="noopener noreferrer">Toloka ↗</a>
                     <ul class="profile-focus" aria-label="Current focus areas">
                         <li>Agentic systems</li>
@@ -1446,6 +1696,73 @@
                     <div class="console-row"><span>orchestrator</span><span>12 tools</span></div>
                 </div>
             </article>
+        </section>
+
+        <section class="cases" id="cases">
+            <div class="section-heading reveal">
+                <span class="section-index">00 / Selected cases</span>
+                <div>
+                    <h2>Real systems. Public proof.</h2>
+                    <p>Selected client work, product delivery and applied ML projects with measurable scope — using public numbers where they exist and keeping NDA work private.</p>
+                </div>
+            </div>
+
+            <div class="cases-grid reveal">
+                <article class="case-card case-featured">
+                    <div class="case-body">
+                        <div class="case-meta"><span>Client platform · YugoRent</span><span>Live product</span></div>
+                        <h3>13 operating domains. One rental system.</h3>
+                        <p>Designed and shipped a bilingual booking website and operations CRM spanning fleet, ownership, rentals, payments, maintenance, contracts, reporting and secure production delivery.</p>
+                        <a class="case-link" href="https://yugorent.rs" target="_blank" rel="noopener noreferrer">View live product ↗</a>
+                    </div>
+                    <ul class="case-metrics" aria-label="YugoRent project scope">
+                        <li><strong>13</strong><span>operating domains</span></li>
+                        <li><strong>2</strong><span>languages</span></li>
+                        <li><strong>26</strong><span>automated checks</span></li>
+                    </ul>
+                </article>
+
+                <article class="case-card case-toloka">
+                    <div class="case-meta"><span>Industry · Toloka</span><span>2025</span></div>
+                    <h3>Expert AI data on the ground at EMNLP.</h3>
+                    <p>Represented Toloka as an official host at EMNLP 2025 in Suzhou, connecting research conversations with production data and evaluation practice.</p>
+                    <div class="case-stats" aria-label="EMNLP event details"><span>EMNLP 2025</span><span>Suzhou</span><span>Booth #1</span></div>
+                    <a class="case-link" href="https://toloka.ai/events/emnlp" target="_blank" rel="noopener noreferrer">Official event page ↗</a>
+                </article>
+
+                <article class="case-card case-kidskey">
+                    <div class="case-meta"><span>ML product · Kidskey</span><span>2023 — 2024</span></div>
+                    <h3>Multimodal learning at global platform scale.</h3>
+                    <p>Built internal data products, retrieval-augmented support and recommendation work across video, audio and text for an international education platform.</p>
+                    <div class="case-stats" aria-label="Kidskey public platform scale"><span>12K children*</span><span>70 countries*</span><span>210K lessons*</span></div>
+                    <a class="case-link" href="https://kidskey.org/en" target="_blank" rel="noopener noreferrer">Client platform ↗</a>
+                </article>
+
+                <article class="case-card case-third case-emergency">
+                    <div class="case-meta"><span>Public safety · Emergency DataHack</span><span>2021</span></div>
+                    <h3>Seven-day flood forecasting for the Lena River.</h3>
+                    <p>Built a predictive ML solution with team Geoverflow for a real emergency-response task and received a special prize.</p>
+                    <div class="case-stats" aria-label="Emergency DataHack results"><span>7-day horizon</span><span>45 teams</span><span>Special prize</span></div>
+                    <a class="case-link" href="https://data.rcsi.science/publications/news/80/" target="_blank" rel="noopener noreferrer">Published result ↗</a>
+                </article>
+
+                <article class="case-card case-third case-raifhack">
+                    <div class="case-meta"><span>Fintech · Raifhack</span><span>2021</span></div>
+                    <h3>Top-15% commercial real-estate valuation.</h3>
+                    <p>Created a team ML pipeline for commercial property appraisal under hackathon constraints.</p>
+                    <div class="case-stats" aria-label="Raifhack results"><span>Top 15%</span><span>5-person team</span><span>Valuation ML</span></div>
+                    <a class="case-link" href="https://github.com/ulyumdzhi/Raifhack" target="_blank" rel="noopener noreferrer">Project repository ↗</a>
+                </article>
+
+                <article class="case-card case-third case-elbrus">
+                    <div class="case-meta"><span>Mentoring · Elbrus</span><span>2021 — 2023</span></div>
+                    <h3>27 capstone products across 15 cohorts.</h3>
+                    <p>Mentored students, marathons and workshops across computer vision, NLP, recommendation systems and production bots.</p>
+                    <div class="case-stats" aria-label="Elbrus mentoring scope"><span>15 cohorts</span><span>27 projects</span><span>Applied AI</span></div>
+                    <a class="case-link" href="https://github.com/ulyumdzhi/elbrus-ds-final-projects" target="_blank" rel="noopener noreferrer">Public project archive ↗</a>
+                </article>
+            </div>
+            <p class="cases-note">* Kidskey-reported platform scale; figures describe the client platform, not attributed project uplift.</p>
         </section>
 
         <section class="feature reveal">
@@ -1517,7 +1834,7 @@
             <div class="experience-board reveal">
                 <article class="role role-current">
                     <div class="role-period"><span>2024 — now</span><span class="role-status">Current role</span></div>
-                    <h3>Solutions Engineering Team Lead &amp; Solutions Engineer</h3>
+                    <h3>Senior Solutions Engineer &amp; Technical Team Lead</h3>
                     <a class="role-company" href="https://toloka.ai" target="_blank" rel="noopener noreferrer">Toloka ↗</a>
                     <p>Shaping solution architecture and guiding the Solutions Engineering team while advancing agentic systems, LLM evaluation and expert-data workflows at scale.</p>
                     <ul class="impact-list">
