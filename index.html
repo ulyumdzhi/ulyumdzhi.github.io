@@ -344,18 +344,6 @@
             box-shadow: 0 8px 0 rgba(17, 18, 20, 0.10);
         }
 
-        .hero-profile::after {
-            position: absolute;
-            right: -34px;
-            bottom: -38px;
-            width: 126px;
-            height: 126px;
-            content: '';
-            background: rgba(83, 104, 255, 0.12);
-            border: 1px solid rgba(17, 18, 20, 0.22);
-            border-radius: 50%;
-        }
-
         .profile-meta {
             display: flex;
             align-items: center;
@@ -371,14 +359,15 @@
         .profile-photo {
             position: relative;
             z-index: 1;
-            width: 88px;
+            width: 112px;
             aspect-ratio: 1;
-            margin: 0 18px 12px 0;
+            margin: 0;
             overflow: hidden;
-            float: left;
+            align-self: end;
+            justify-self: end;
             background: var(--white);
             border: 1px solid var(--ink);
-            border-radius: 14px;
+            border-radius: 16px;
             box-shadow: 4px 4px 0 rgba(17, 18, 20, 0.10);
         }
 
@@ -390,20 +379,16 @@
             transform: scale(1.1);
         }
 
-        .profile-identity {
+        .profile-footer {
             position: relative;
             z-index: 1;
-            display: flow-root;
-            margin-bottom: 26px;
-        }
-
-        .profile-identity h2 {
-            margin-bottom: 10px;
-            font-size: clamp(1.55rem, 2.4vw, 2rem);
-        }
-
-        .profile-identity .profile-company {
-            margin-bottom: 0;
+            display: grid;
+            align-items: end;
+            margin-top: 30px;
+            padding-top: 22px;
+            border-top: 1px solid rgba(17, 18, 20, 0.18);
+            grid-template-columns: minmax(0, 1fr) 112px;
+            gap: 20px;
         }
 
         .profile-status {
@@ -433,7 +418,7 @@
             position: relative;
             z-index: 1;
             display: inline-block;
-            margin-bottom: 24px;
+            margin-bottom: 0;
             color: var(--cobalt);
             font-weight: 700;
             text-decoration: none;
@@ -1487,13 +1472,15 @@
             }
 
             .profile-photo {
-                width: 76px;
-                margin: 0 14px 8px 0;
-                border-radius: 12px;
+                width: 88px;
+                border-radius: 14px;
             }
 
-            .profile-identity h2 {
-                font-size: clamp(1.3rem, 6.5vw, 1.6rem);
+            .profile-footer {
+                margin-top: 24px;
+                padding-top: 18px;
+                grid-template-columns: minmax(0, 1fr) 88px;
+                gap: 14px;
             }
 
             .module-grid,
@@ -1671,20 +1658,18 @@
                         <span>2024 — now</span>
                         <span class="profile-status">Current role</span>
                     </div>
-                    <div class="profile-identity">
+                    <h2>Senior Solutions Engineer &amp; Technical Team Lead</h2>
+                    <a class="profile-company" href="https://toloka.ai" target="_blank" rel="noopener noreferrer">Toloka ↗</a>
+                    <div class="profile-footer">
+                        <ul class="profile-focus" aria-label="Current focus areas">
+                            <li>Agentic systems</li>
+                            <li>LLM evaluation</li>
+                            <li>Solution architecture</li>
+                        </ul>
                         <figure class="profile-photo">
                             <img src="assets/profile-portrait.webp" width="512" height="512" alt="Portrait of Uliumdzhi Uliumdzhiev">
                         </figure>
-                        <div>
-                            <h2>Senior Solutions Engineer &amp; Technical Team Lead</h2>
-                            <a class="profile-company" href="https://toloka.ai" target="_blank" rel="noopener noreferrer">Toloka ↗</a>
-                        </div>
                     </div>
-                    <ul class="profile-focus" aria-label="Current focus areas">
-                        <li>Agentic systems</li>
-                        <li>LLM evaluation</li>
-                        <li>Solution architecture</li>
-                    </ul>
                 </aside>
             </div>
         </section>
