@@ -361,7 +361,7 @@
             align-items: center;
             justify-content: space-between;
             gap: 16px;
-            margin-bottom: 18px;
+            margin-bottom: 30px;
             font-family: var(--mono);
             font-size: 9px;
             letter-spacing: 0.05em;
@@ -373,7 +373,7 @@
             z-index: 1;
             width: 88px;
             aspect-ratio: 1;
-            margin: 0 0 26px auto;
+            margin: 0;
             overflow: hidden;
             background: var(--white);
             border: 1px solid var(--ink);
@@ -387,6 +387,25 @@
             object-fit: cover;
             object-position: center 36%;
             transform: scale(1.1);
+        }
+
+        .profile-identity {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            align-items: start;
+            margin-bottom: 26px;
+            grid-template-columns: 88px minmax(0, 1fr);
+            gap: 18px;
+        }
+
+        .profile-identity h2 {
+            margin-bottom: 10px;
+            font-size: clamp(1.55rem, 2.4vw, 2rem);
+        }
+
+        .profile-identity .profile-company {
+            margin-bottom: 0;
         }
 
         .profile-status {
@@ -1466,7 +1485,7 @@
             }
 
             .profile-meta {
-                margin-bottom: 18px;
+                margin-bottom: 24px;
             }
 
             .module-grid,
@@ -1644,11 +1663,15 @@
                         <span>2024 — now</span>
                         <span class="profile-status">Current role</span>
                     </div>
-                    <figure class="profile-photo">
-                        <img src="assets/profile-portrait.webp" width="512" height="512" alt="Portrait of Uliumdzhi Uliumdzhiev">
-                    </figure>
-                    <h2>Senior Solutions Engineer &amp; Technical Team Lead</h2>
-                    <a class="profile-company" href="https://toloka.ai" target="_blank" rel="noopener noreferrer">Toloka ↗</a>
+                    <div class="profile-identity">
+                        <figure class="profile-photo">
+                            <img src="assets/profile-portrait.webp" width="512" height="512" alt="Portrait of Uliumdzhi Uliumdzhiev">
+                        </figure>
+                        <div>
+                            <h2>Senior Solutions Engineer &amp; Technical Team Lead</h2>
+                            <a class="profile-company" href="https://toloka.ai" target="_blank" rel="noopener noreferrer">Toloka ↗</a>
+                        </div>
+                    </div>
                     <ul class="profile-focus" aria-label="Current focus areas">
                         <li>Agentic systems</li>
                         <li>LLM evaluation</li>
