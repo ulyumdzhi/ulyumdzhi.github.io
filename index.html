@@ -632,25 +632,9 @@
             grid-column: span 3;
         }
 
-        .case-featured {
-            display: grid;
-            min-height: 420px;
-            color: var(--white);
-            background: var(--ink);
-            grid-column: 1 / -1;
-            grid-template-columns: minmax(0, 1.15fr) minmax(390px, 0.85fr);
-            gap: 54px;
-        }
-
         .case-third {
             min-height: 340px;
             grid-column: span 2;
-        }
-
-        .case-body {
-            display: flex;
-            min-width: 0;
-            flex-direction: column;
         }
 
         .case-toloka { background: var(--white); }
@@ -670,10 +654,6 @@
             font-size: 9px;
             letter-spacing: 0.05em;
             text-transform: uppercase;
-        }
-
-        .case-featured .case-meta {
-            color: #b7bac1;
         }
 
         .case-kidskey .case-meta {
@@ -704,78 +684,8 @@
             font-size: 14px;
         }
 
-        .case-featured p {
-            color: #d3d5da;
-        }
-
         .case-emergency p {
             color: var(--white);
-        }
-
-        .case-link {
-            display: inline-flex;
-            width: fit-content;
-            align-items: center;
-            gap: 6px;
-            margin-top: auto;
-            font-size: 13px;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .case-link:hover,
-        .case-link:focus-visible {
-            text-decoration: underline;
-            text-underline-offset: 4px;
-        }
-
-        .case-card:not(.case-featured) .case-link {
-            margin-top: 22px;
-        }
-
-        .case-metrics {
-            display: grid;
-            margin: 0;
-            padding: 0;
-            align-self: end;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1px;
-            background: rgba(255, 255, 255, 0.18);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            border-radius: 14px;
-            list-style: none;
-        }
-
-        .case-metrics li {
-            min-width: 0;
-            padding: 20px 16px;
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .case-metrics li:first-child {
-            border-radius: 13px 0 0 13px;
-        }
-
-        .case-metrics li:last-child {
-            border-radius: 0 13px 13px 0;
-        }
-
-        .case-metrics strong {
-            display: block;
-            margin-bottom: 6px;
-            font-size: clamp(2rem, 4vw, 3.25rem);
-            font-weight: 600;
-            letter-spacing: -0.06em;
-            line-height: 1;
-        }
-
-        .case-metrics span {
-            display: block;
-            color: #c6c8ce;
-            font-family: var(--mono);
-            font-size: 8px;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
         }
 
         .case-stats {
@@ -959,15 +869,6 @@
             margin-bottom: 0;
             color: var(--muted);
             font-size: 17px;
-        }
-
-        .section-heading a {
-            color: var(--ink);
-            font-weight: 650;
-            text-decoration: underline;
-            text-decoration-color: var(--mint);
-            text-decoration-thickness: 2px;
-            text-underline-offset: 4px;
         }
 
         .stack-board {
@@ -1355,14 +1256,7 @@
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
-            .case-featured {
-                grid-column: 1 / -1;
-                grid-template-columns: 1fr;
-                gap: 38px;
-            }
-
-            .case-card:not(.case-featured),
-            .case-third {
+            .case-card {
                 grid-column: span 1;
             }
 
@@ -1489,32 +1383,14 @@
                 grid-template-columns: 1fr;
             }
 
-            .case-card,
-            .case-featured,
-            .case-third {
+            .case-card {
                 min-height: 340px;
                 padding: 27px 24px;
                 grid-column: 1;
             }
 
-            .case-featured {
-                gap: 32px;
-            }
-
             .case-meta {
                 margin-bottom: 52px;
-            }
-
-            .case-metrics {
-                align-self: end;
-            }
-
-            .case-metrics li {
-                padding: 16px 10px;
-            }
-
-            .case-metrics strong {
-                font-size: 2.25rem;
             }
 
             .feature-head h2,
@@ -1712,31 +1588,16 @@
                 <span class="section-index">00 / Selected cases</span>
                 <div>
                     <h2>Real systems. Professional record.</h2>
-                    <p>Selected client work, product delivery and applied ML projects with measurable scope. Official project pages are linked where public; the complete professional timeline is on <a href="https://www.linkedin.com/in/ulyumdzhi" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>.</p>
+                    <p>Selected client work, product delivery and applied ML projects with measurable scope. The complete professional timeline is available on LinkedIn.</p>
                 </div>
             </div>
 
             <div class="cases-grid reveal">
-                <article class="case-card case-featured">
-                    <div class="case-body">
-                        <div class="case-meta"><span>Client platform · YugoRent</span><span>Live product</span></div>
-                        <h3>13 operating domains. One rental system.</h3>
-                        <p>Designed and shipped a bilingual booking website and operations CRM spanning fleet, ownership, rentals, payments, maintenance, contracts, reporting and secure production delivery.</p>
-                        <a class="case-link" href="https://yugorent.rs" target="_blank" rel="noopener noreferrer">View live product ↗</a>
-                    </div>
-                    <ul class="case-metrics" aria-label="YugoRent project scope">
-                        <li><strong>13</strong><span>operating domains</span></li>
-                        <li><strong>2</strong><span>languages</span></li>
-                        <li><strong>26</strong><span>automated checks</span></li>
-                    </ul>
-                </article>
-
                 <article class="case-card case-toloka">
                     <div class="case-meta"><span>Industry · Toloka</span><span>2025</span></div>
                     <h3>Expert AI data on the ground at EMNLP.</h3>
                     <p>Represented Toloka as an official host at EMNLP 2025 in Suzhou, connecting research conversations with production data and evaluation practice.</p>
                     <div class="case-stats" aria-label="EMNLP event details"><span>EMNLP 2025</span><span>Suzhou</span><span>Booth #1</span></div>
-                    <a class="case-link" href="https://toloka.ai/events/emnlp" target="_blank" rel="noopener noreferrer">Official event page ↗</a>
                 </article>
 
                 <article class="case-card case-kidskey">
@@ -1744,7 +1605,6 @@
                     <h3>Multimodal learning at global platform scale.</h3>
                     <p>Built internal data products, retrieval-augmented support and recommendation work across video, audio and text for an international education platform.</p>
                     <div class="case-stats" aria-label="Kidskey public platform scale"><span>12K children*</span><span>70 countries*</span><span>210K lessons*</span></div>
-                    <a class="case-link" href="https://kidskey.org/en" target="_blank" rel="noopener noreferrer">Client platform ↗</a>
                 </article>
 
                 <article class="case-card case-third case-emergency">
@@ -1752,7 +1612,6 @@
                     <h3>Seven-day flood forecasting for the Lena River.</h3>
                     <p>Built a predictive ML solution with team Geoverflow for a real emergency-response task and received a special prize.</p>
                     <div class="case-stats" aria-label="Emergency DataHack results"><span>7-day horizon</span><span>45 teams</span><span>Special prize</span></div>
-                    <a class="case-link" href="https://data.rcsi.science/publications/news/80/" target="_blank" rel="noopener noreferrer">Published result ↗</a>
                 </article>
 
                 <article class="case-card case-third case-raifhack">
@@ -1760,7 +1619,6 @@
                     <h3>Top-15% commercial real-estate valuation.</h3>
                     <p>Created a team ML pipeline for commercial property appraisal under hackathon constraints.</p>
                     <div class="case-stats" aria-label="Raifhack results"><span>Top 15%</span><span>5-person team</span><span>Valuation ML</span></div>
-                    <a class="case-link" href="https://www.linkedin.com/in/ulyumdzhi" target="_blank" rel="noopener noreferrer">Professional record ↗</a>
                 </article>
 
                 <article class="case-card case-third case-elbrus">
@@ -1768,7 +1626,6 @@
                     <h3>27 capstone products across 15 cohorts.</h3>
                     <p>Mentored students, marathons and workshops across computer vision, NLP, recommendation systems and production bots.</p>
                     <div class="case-stats" aria-label="Elbrus mentoring scope"><span>15 cohorts</span><span>27 projects</span><span>Applied AI</span></div>
-                    <a class="case-link" href="https://www.linkedin.com/in/ulyumdzhi" target="_blank" rel="noopener noreferrer">Professional record ↗</a>
                 </article>
             </div>
             <p class="cases-note">* Kidskey-reported platform scale; figures describe the client platform, not attributed project uplift.</p>
