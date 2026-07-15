@@ -361,11 +361,32 @@
             align-items: center;
             justify-content: space-between;
             gap: 16px;
-            margin-bottom: 70px;
+            margin-bottom: 18px;
             font-family: var(--mono);
             font-size: 9px;
             letter-spacing: 0.05em;
             text-transform: uppercase;
+        }
+
+        .profile-photo {
+            position: relative;
+            z-index: 1;
+            width: 88px;
+            aspect-ratio: 1;
+            margin: 0 0 26px auto;
+            overflow: hidden;
+            background: var(--white);
+            border: 1px solid var(--ink);
+            border-radius: 14px;
+            box-shadow: 4px 4px 0 rgba(17, 18, 20, 0.10);
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 36%;
+            transform: scale(1.1);
         }
 
         .profile-status {
@@ -1445,7 +1466,7 @@
             }
 
             .profile-meta {
-                margin-bottom: 50px;
+                margin-bottom: 18px;
             }
 
             .module-grid,
@@ -1623,6 +1644,9 @@
                         <span>2024 — now</span>
                         <span class="profile-status">Current role</span>
                     </div>
+                    <figure class="profile-photo">
+                        <img src="assets/profile-portrait.webp" width="512" height="512" alt="Portrait of Uliumdzhi Uliumdzhiev">
+                    </figure>
                     <h2>Senior Solutions Engineer &amp; Technical Team Lead</h2>
                     <a class="profile-company" href="https://toloka.ai" target="_blank" rel="noopener noreferrer">Toloka ↗</a>
                     <ul class="profile-focus" aria-label="Current focus areas">
