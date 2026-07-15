@@ -152,28 +152,11 @@
         .brand {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
             font-size: 17px;
             font-weight: 700;
             letter-spacing: -0.04em;
             text-decoration: none;
-        }
-
-        .brand-symbol {
-            position: relative;
-            width: 26px;
-            height: 26px;
-            background: var(--ink);
-            border-radius: 7px;
-            transform: rotate(45deg);
-        }
-
-        .brand-symbol::after {
-            position: absolute;
-            inset: 7px;
-            content: '';
-            background: var(--paper);
-            border-radius: 2px;
+            white-space: nowrap;
         }
 
         .nav-links {
@@ -1370,12 +1353,16 @@
             }
 
             .nav {
+                gap: 12px;
                 padding: 0 16px;
             }
 
-            .brand span:last-child,
             .nav-links > a:not(.nav-cta) {
                 display: none;
+            }
+
+            .brand {
+                font-size: clamp(0.75rem, 3.6vw, 0.875rem);
             }
 
             .hero {
@@ -1559,10 +1546,7 @@
 
     <header class="site-header">
         <nav class="nav shell" aria-label="Primary navigation">
-            <a class="brand" href="#top" aria-label="Uliumdzhi Uliumdzhiev — home">
-                <span class="brand-symbol" aria-hidden="true">&#8203;</span>
-                <span>Uliumdzhi</span>
-            </a>
+            <a class="brand" href="#top" aria-label="Uliumdzhi Uliumdzhiev — home">Uliumdzhi Uliumdzhiev</a>
             <div class="nav-links">
                 <a href="#cases">Cases</a>
                 <a href="#stack">Stack</a>
