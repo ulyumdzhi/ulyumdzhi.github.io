@@ -241,8 +241,8 @@
             display: grid;
             width: 100%;
             align-items: end;
-            grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
-            gap: clamp(48px, 7vw, 88px);
+            grid-template-columns: minmax(0, 1.25fr) minmax(360px, 0.75fr);
+            gap: clamp(36px, 4vw, 56px);
         }
 
         .eyebrow {
@@ -1385,8 +1385,8 @@
         @media (max-width: 960px) {
             .hero-inner {
                 align-items: stretch;
-                grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
-                gap: 38px;
+                grid-template-columns: minmax(0, 1fr) minmax(340px, 0.9fr);
+                gap: 28px;
             }
 
             .cases-grid {
@@ -1455,7 +1455,7 @@
             }
 
             .hero {
-                padding: 74px 20px 64px;
+                padding: 74px 16px 64px;
             }
 
             .hero::before {
@@ -1481,11 +1481,25 @@
             }
 
             .hero-profile {
-                padding: 24px;
+                padding: 22px;
             }
 
             .profile-meta {
                 margin-bottom: 24px;
+            }
+
+            .profile-identity {
+                grid-template-columns: 76px minmax(0, 1fr);
+                gap: 14px;
+            }
+
+            .profile-photo {
+                width: 76px;
+                border-radius: 12px;
+            }
+
+            .profile-identity h2 {
+                font-size: clamp(1.3rem, 6.5vw, 1.6rem);
             }
 
             .module-grid,
