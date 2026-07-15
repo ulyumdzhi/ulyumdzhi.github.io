@@ -639,6 +639,9 @@
 
         .case-toloka { background: var(--white); }
         .case-kidskey { background: var(--coral-soft); }
+        .case-shopify { background: #e4f8dc; }
+        .case-servicenow { background: #e8f1ff; }
+        .case-agent-eval { color: var(--white); background: var(--ink); }
         .case-emergency { color: var(--white); background: var(--cobalt); }
         .case-raifhack { background: var(--lavender-soft); }
         .case-elbrus { background: var(--mint-soft); }
@@ -660,6 +663,7 @@
             color: #55585f;
         }
 
+        .case-agent-eval .case-meta,
         .case-emergency .case-meta {
             color: var(--white);
         }
@@ -677,6 +681,10 @@
             font-size: clamp(1.75rem, 2.8vw, 2.45rem);
         }
 
+        .case-third .case-meta {
+            margin-bottom: 52px;
+        }
+
         .case-card p {
             max-width: 600px;
             margin-bottom: 24px;
@@ -684,6 +692,7 @@
             font-size: 14px;
         }
 
+        .case-agent-eval p,
         .case-emergency p {
             color: var(--white);
         }
@@ -705,9 +714,25 @@
             text-transform: uppercase;
         }
 
+        .case-agent-eval .case-stats span,
         .case-emergency .case-stats span {
             background: rgba(255, 255, 255, 0.13);
             border-color: rgba(255, 255, 255, 0.42);
+        }
+
+        .case-source {
+            display: inline-flex;
+            width: fit-content;
+            margin-top: 22px;
+            font-size: 12px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .case-source:hover,
+        .case-source:focus-visible {
+            text-decoration: underline;
+            text-underline-offset: 4px;
         }
 
         .cases-note {
@@ -1588,16 +1613,16 @@
                 <span class="section-index">00 / Selected cases</span>
                 <div>
                     <h2>Real systems. Professional record.</h2>
-                    <p>Selected client work, product delivery and applied ML projects with measurable scope. The complete professional timeline is available on LinkedIn.</p>
+                    <p>Selected client work and public case studies attached to my LinkedIn experience. Named client work appears here only where the relationship and results are already public.</p>
                 </div>
             </div>
 
             <div class="cases-grid reveal">
                 <article class="case-card case-toloka">
-                    <div class="case-meta"><span>Industry · Toloka</span><span>2025</span></div>
-                    <h3>Expert AI data on the ground at EMNLP.</h3>
-                    <p>Represented Toloka as an official host at EMNLP 2025 in Suzhou, connecting research conversations with production data and evaluation practice.</p>
-                    <div class="case-stats" aria-label="EMNLP event details"><span>EMNLP 2025</span><span>Suzhou</span><span>Booth #1</span></div>
+                    <div class="case-meta"><span>Solutions engineering · Toloka</span><span>2025 — now</span></div>
+                    <h3>AI systems for Anthropic, Amazon and Shopify.</h3>
+                    <p>Lead solution architecture, proof-of-concepts and scaled delivery for top-tier AI and technology companies, aligning engineering teams with client and business priorities.</p>
+                    <div class="case-stats" aria-label="Toloka role focus"><span>PoC → scale</span><span>Team leadership</span><span>Tech enablement</span></div>
                 </article>
 
                 <article class="case-card case-kidskey">
@@ -1605,6 +1630,30 @@
                     <h3>Multimodal learning at global platform scale.</h3>
                     <p>Built internal data products, retrieval-augmented support and recommendation work across video, audio and text for an international education platform.</p>
                     <div class="case-stats" aria-label="Kidskey public platform scale"><span>12K children*</span><span>70 countries*</span><span>210K lessons*</span></div>
+                </article>
+
+                <article class="case-card case-third case-shopify">
+                    <div class="case-meta"><span>Commerce AI · Shopify</span><span>Public case</span></div>
+                    <h3>22K collections mapped to a 10K+ category taxonomy.</h3>
+                    <p>A hybrid model–expert pipeline combined vector RAG, structural tree search and targeted human review to deliver high-quality product data under a days-long deadline.</p>
+                    <div class="case-stats" aria-label="Shopify case results"><span>22K collections</span><span>10K+ categories</span><span>≥95% target</span></div>
+                    <a class="case-source" href="https://toloka.ai/blog/building-shopify-s-product-catalogue-at-ai-speed/" target="_blank" rel="noopener noreferrer">Read public case ↗</a>
+                </article>
+
+                <article class="case-card case-third case-servicenow">
+                    <div class="case-meta"><span>AI evaluation · ServiceNow</span><span>Public case</span></div>
+                    <h3>From 400 evaluations a week to 3,000 a day.</h3>
+                    <p>Customized human-evaluation pipelines scaled multi-turn agent research while tracking responsiveness, transparency, accuracy, groundedness and helpfulness.</p>
+                    <div class="case-stats" aria-label="ServiceNow case results"><span>400 / week</span><span>3K / day</span><span>5 criteria</span></div>
+                    <a class="case-source" href="https://toloka.ai/blog/toloka-helps-servicenow-increase-evaluation-throughput-multiple-times/" target="_blank" rel="noopener noreferrer">Read public case ↗</a>
+                </article>
+
+                <article class="case-card case-third case-agent-eval">
+                    <div class="case-meta"><span>Enterprise agents · Toloka</span><span>Public method</span></div>
+                    <h3>Virtual companies that make AI agents fail usefully.</h3>
+                    <p>High-fidelity business environments combine domain experts, solution engineering, mocked tools and deterministic evaluation to expose weaknesses before enterprise rollout.</p>
+                    <div class="case-stats" aria-label="Enterprise agent evaluation scope"><span>50+ tools</span><span>40+ languages</span><span>≥50% fail target</span></div>
+                    <a class="case-source" href="https://toloka.ai/blog/virtual-companies-to-forge-enterprise-ready-ai/" target="_blank" rel="noopener noreferrer">Read public method ↗</a>
                 </article>
 
                 <article class="case-card case-third case-emergency">
@@ -1628,7 +1677,7 @@
                     <div class="case-stats" aria-label="Elbrus mentoring scope"><span>15 cohorts</span><span>27 projects</span><span>Applied AI</span></div>
                 </article>
             </div>
-            <p class="cases-note">* Kidskey-reported platform scale; figures describe the client platform, not attributed project uplift.</p>
+            <p class="cases-note">* Toloka materials are public links attached to my LinkedIn experience. Kidskey figures describe platform scale, not attributed project uplift.</p>
         </section>
 
         <section class="feature reveal">
