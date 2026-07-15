@@ -642,6 +642,15 @@
             grid-column: span 2;
         }
 
+        .case-tendem {
+            min-height: 430px;
+            color: var(--white);
+            background:
+                radial-gradient(circle at 84% 18%, rgba(140, 231, 202, 0.2), transparent 29%),
+                var(--ink);
+            grid-column: 1 / -1;
+        }
+
         .case-toloka { background: var(--white); }
         .case-kidskey { background: var(--coral-soft); }
         .case-shopify { background: #e4f8dc; }
@@ -669,8 +678,63 @@
         }
 
         .case-agent-eval .case-meta,
+        .case-tendem .case-meta,
         .case-emergency .case-meta {
             color: var(--white);
+        }
+
+        .case-tendem .case-meta {
+            margin-bottom: 42px;
+        }
+
+        .tendem-layout {
+            display: grid;
+            align-items: stretch;
+            flex: 1;
+            grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+            gap: 54px;
+        }
+
+        .tendem-copy {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .tendem-scope {
+            display: grid;
+            align-content: end;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .tendem-scope li {
+            display: grid;
+            padding: 17px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.22);
+            grid-template-columns: 28px minmax(0, 1fr);
+            gap: 5px 12px;
+        }
+
+        .tendem-scope li:last-child {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+        }
+
+        .tendem-scope span {
+            color: var(--mint);
+            font-family: var(--mono);
+            font-size: 9px;
+        }
+
+        .tendem-scope strong {
+            font-size: 15px;
+        }
+
+        .tendem-scope small {
+            color: #b9bbc0;
+            font-size: 11px;
+            grid-column: 2;
         }
 
         .case-card h3 {
@@ -698,6 +762,7 @@
         }
 
         .case-agent-eval p,
+        .case-tendem p,
         .case-emergency p {
             color: var(--white);
         }
@@ -720,6 +785,7 @@
         }
 
         .case-agent-eval .case-stats span,
+        .case-tendem .case-stats span,
         .case-emergency .case-stats span {
             background: rgba(255, 255, 255, 0.13);
             border-color: rgba(255, 255, 255, 0.42);
@@ -1044,6 +1110,13 @@
             color: #c9cbd0;
         }
 
+        .role-inline-link {
+            color: inherit;
+            font-weight: 700;
+            text-decoration-color: rgba(140, 231, 202, 0.6);
+            text-underline-offset: 3px;
+        }
+
         .impact-list {
             display: grid;
             gap: 10px;
@@ -1290,6 +1363,15 @@
                 grid-column: span 1;
             }
 
+            .case-tendem {
+                grid-column: 1 / -1;
+            }
+
+            .tendem-layout {
+                grid-template-columns: 1fr;
+                gap: 34px;
+            }
+
             .module-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -1408,6 +1490,10 @@
                 min-height: 340px;
                 padding: 27px 24px;
                 grid-column: 1;
+            }
+
+            .case-tendem {
+                min-height: 0;
             }
 
             .case-meta {
@@ -1609,11 +1695,28 @@
                 <span class="section-index">00 / Selected cases</span>
                 <div>
                     <h2>Selected work. Measurable results.</h2>
-                    <p>Selected client work and public case studies attached to my LinkedIn experience. Named client work appears here only where the relationship and results are already public.</p>
+                    <p>Selected client work, active product ownership and public case studies. Named client work appears here only where the relationship and results are already public.</p>
                 </div>
             </div>
 
             <div class="cases-grid reveal">
+                <article class="case-card case-tendem">
+                    <div class="case-meta"><span>HITL ownership · Tendem AI</span><span>Live now</span></div>
+                    <div class="tendem-layout">
+                        <div class="tendem-copy">
+                            <h3>Owning the human layer behind a live AI product.</h3>
+                            <p>I currently own Tendem’s HITL layer, shaping both its product direction and technical architecture. Across multiple phases of this internal venture, the team has brought me back to turn expert operations, quality controls and delivery constraints into a live AI + human product.</p>
+                            <div class="case-stats" aria-label="Tendem ownership scope"><span>HITL owner</span><span>Product + tech</span><span>Active delivery</span></div>
+                            <a class="case-source" href="https://tendem.ai/" target="_blank" rel="noopener noreferrer">Visit Tendem ↗</a>
+                        </div>
+                        <ul class="tendem-scope" aria-label="Tendem AI ownership areas">
+                            <li><span>01</span><strong>Product direction</strong><small>Defining what the human layer should solve.</small></li>
+                            <li><span>02</span><strong>HITL architecture</strong><small>Designing expert workflows and quality controls.</small></li>
+                            <li><span>03</span><strong>Live delivery</strong><small>Carrying ownership into the product in use today.</small></li>
+                        </ul>
+                    </div>
+                </article>
+
                 <article class="case-card case-toloka">
                     <div class="case-meta"><span>Solutions engineering · Toloka</span><span>2024 — now</span></div>
                     <h3>From AI proof of concept to production.</h3>
@@ -1747,8 +1850,9 @@
                     <div class="role-period"><span>2024 — now</span><span class="role-status">Current role</span></div>
                     <h3>Senior Solutions Engineer &amp; Technical Team Lead</h3>
                     <a class="role-company" href="https://toloka.ai" target="_blank" rel="noopener noreferrer">Toloka ↗</a>
-                    <p>Shaping solution architecture and guiding the Solutions Engineering team while advancing agentic systems, LLM evaluation and expert-data workflows at scale.</p>
+                    <p>Shaping solution architecture and guiding the Solutions Engineering team. I also own the HITL layer for <a class="role-inline-link" href="https://tendem.ai/" target="_blank" rel="noopener noreferrer">Tendem AI ↗</a>, an internal venture where I bridge product direction, expert operations and technical delivery.</p>
                     <ul class="impact-list">
+                        <li>Brought back across multiple phases to own HITL product decisions and technical architecture as Tendem evolved.</li>
                         <li>Championing the integration and adoption of internal tools across the department.</li>
                         <li>Building pipelines for agent systems, SFT, RLHF and evaluation.</li>
                         <li>Implementing data strategies and expert-annotation workflows across industries.</li>
