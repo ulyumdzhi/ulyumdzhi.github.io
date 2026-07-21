@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Uliumdzhi Uliumdzhiev — Senior Solutions Engineer and Technical Team Lead building reliable AI, agent and data systems.">
+    <meta name="description" content="Uliumdzhi Uliumdzhiev — Senior Solutions Engineer and Technical Team Lead specializing in enterprise AI, agentic systems, LLM evaluation, machine learning and data platforms.">
     <meta name="theme-color" content="#f7f7f5">
     <meta property="og:title" content="Uliumdzhi Uliumdzhiev — Senior Solutions Engineer">
-    <meta property="og:description" content="Complex AI. Clear systems. Useful products.">
+    <meta property="og:description" content="Enterprise AI, agentic systems and data products—from technical discovery to production delivery.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ulmji.com/">
     <meta property="og:image" content="https://ulmji.com/assets/ai-system.png">
@@ -15,7 +15,7 @@
     <meta property="og:image:alt" content="A modular industrial-design visualization of an AI system">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Uliumdzhi Uliumdzhiev — Senior Solutions Engineer">
-    <meta name="twitter:description" content="Complex AI. Clear systems. Useful products.">
+    <meta name="twitter:description" content="Enterprise AI, agentic systems and data products—from technical discovery to production delivery.">
     <meta name="twitter:image" content="https://ulmji.com/assets/ai-system.png">
     <title>Uliumdzhi Uliumdzhiev — Senior Solutions Engineer</title>
     <link rel="canonical" href="https://ulmji.com/">
@@ -23,6 +23,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Uliumdzhi Uliumdzhiev",
+            "url": "https://ulmji.com/",
+            "image": "https://ulmji.com/assets/profile-portrait.webp",
+            "jobTitle": ["Senior Solutions Engineer", "Technical Team Lead"],
+            "worksFor": {
+                "@type": "Organization",
+                "name": "Toloka",
+                "url": "https://toloka.ai/"
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Belgrade",
+                "addressCountry": "RS"
+            },
+            "sameAs": ["https://www.linkedin.com/in/ulyumdzhi"],
+            "knowsAbout": [
+                "Enterprise AI",
+                "Solution architecture",
+                "Agentic systems",
+                "LLM evaluation",
+                "Human-in-the-loop systems",
+                "Machine learning",
+                "Data engineering",
+                "Technical consulting"
+            ]
+        }
+    </script>
     <script>document.documentElement.classList.add('js');</script>
     <style>
         :root {
@@ -272,13 +303,20 @@
             margin-bottom: 30px;
             font-size: clamp(4.4rem, 7.8vw, 7rem);
             font-weight: 600;
-            letter-spacing: -0.06em;
-            line-height: 0.94;
+            letter-spacing: -0.045em;
+            line-height: 1.04;
         }
 
-        h1 span {
+        .hero-title-line {
             display: block;
+        }
+
+        .hero-title-accent {
             color: var(--cobalt);
+        }
+
+        .hero-title-final {
+            margin-top: -0.2em;
         }
 
         .hero-copy {
@@ -1219,6 +1257,28 @@
             box-shadow: 0 0 0 4px rgba(140, 231, 202, 0.12);
         }
 
+        .role-leadership {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0 0 14px;
+            color: var(--faint);
+            font-family: var(--mono);
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .role-leadership::before {
+            width: 7px;
+            height: 7px;
+            content: '';
+            background: var(--cobalt);
+            border: 1px solid var(--ink);
+            border-radius: 50%;
+        }
+
         .role h3 {
             max-width: 710px;
             margin-bottom: 9px;
@@ -1315,16 +1375,51 @@
             font-size: 10px;
         }
 
+        .earlier-role {
+            min-width: 0;
+        }
+
         .earlier-row h3 {
-            margin-bottom: 0;
+            margin-bottom: 4px;
             font-size: 15px;
             line-height: 1.4;
+        }
+
+        .earlier-company {
+            display: block;
+            color: var(--cobalt);
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 1.35;
         }
 
         .earlier-row p {
             margin-bottom: 0;
             color: var(--muted);
             font-size: 13px;
+        }
+
+        .earlier-details > p:first-child {
+            margin-bottom: 12px;
+        }
+
+        .earlier-details .conference-label {
+            margin-bottom: 5px;
+            color: var(--ink);
+            font-weight: 700;
+        }
+
+        .earlier-highlights {
+            display: grid;
+            margin: 0;
+            padding-left: 18px;
+            color: var(--muted);
+            font-size: 13px;
+            gap: 6px;
+        }
+
+        .earlier-highlights li::marker {
+            color: var(--cobalt);
         }
 
         .education-board {
@@ -1359,6 +1454,18 @@
             font-size: clamp(1.55rem, 3vw, 2.45rem);
             letter-spacing: -0.05em;
             line-height: 1.05;
+        }
+
+        .education-name-line {
+            display: block;
+        }
+
+        .education-name-line:last-child {
+            white-space: nowrap;
+        }
+
+        .education-card h3.education-school-name {
+            font-size: clamp(1.5rem, 3vw, 2.45rem);
         }
 
         .education-card p {
@@ -1491,8 +1598,13 @@
         @media (max-width: 960px) {
             .hero-inner {
                 align-items: start;
-                grid-template-columns: minmax(0, 1fr) minmax(340px, 0.9fr);
-                gap: 28px;
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+
+            .hero-profile {
+                width: min(100%, 520px);
+                justify-self: end;
             }
 
             .cases-grid {
@@ -1577,8 +1689,8 @@
             h1 {
                 max-width: 100%;
                 font-size: clamp(3.45rem, 15.2vw, 4.75rem);
-                letter-spacing: -0.048em;
-                line-height: 0.98;
+                letter-spacing: -0.036em;
+                line-height: 1.05;
             }
 
             .hero-actions {
@@ -1775,8 +1887,8 @@
         <nav class="nav shell" aria-label="Primary navigation">
             <a class="brand" href="#top" aria-label="Uliumdzhi Uliumdzhiev — home">Uliumdzhi Uliumdzhiev</a>
             <div class="nav-links">
-                <a href="#cases">Cases</a>
-                <a href="#stack">Stack</a>
+                <a href="#cases">Projects</a>
+                <a href="#stack">Skills</a>
                 <a href="#experience">Experience</a>
                 <a class="nav-cta" href="#contact">Let's talk</a>
             </div>
@@ -1787,8 +1899,13 @@
         <section class="hero" id="top">
             <div class="hero-inner">
                 <div class="hero-content">
-                    <h1>AI systems.<span>Made to work.</span></h1>
-                    <p class="hero-copy">Senior Solutions Engineer and Technical Team Lead at Toloka. I turn ambiguous AI and data problems into reliable products — from architecture and evaluation to production.</p>
+                    <p class="eyebrow">Professional summary</p>
+                    <h1>
+                        <span class="hero-title-line">Applied AI.</span>
+                        <span class="hero-title-line hero-title-accent">Built for</span>
+                        <span class="hero-title-line hero-title-accent hero-title-final">production.</span>
+                    </h1>
+                    <p class="hero-copy">Solutions engineering leader with 10+ years across engineering, analytics and machine learning. I architect agentic systems, LLM evaluation, human-in-the-loop workflows and data platforms for enterprise teams—from technical discovery and proof of concept to production delivery.</p>
                     <div class="hero-actions">
                         <a class="button button-dark" href="mailto:ulyumdzhiev@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a>
                         <a class="button button-light" href="#experience">View experience <span aria-hidden="true">↓</span></a>
@@ -1798,16 +1915,16 @@
 
                 <aside class="hero-profile" aria-label="Current role">
                     <div class="profile-meta">
-                        <span>2024 — now</span>
+                        <span>2024 — present</span>
                         <span class="profile-status">Current role</span>
                     </div>
                     <h2>Senior Solutions Engineer &amp; Technical Team Lead</h2>
                     <a class="profile-company" href="https://toloka.ai" target="_blank" rel="noopener noreferrer">Toloka ↗</a>
                     <div class="profile-footer">
                         <ul class="profile-focus" aria-label="Current focus areas">
-                            <li>Agentic systems</li>
+                            <li>Enterprise AI</li>
                             <li>LLM evaluation</li>
-                            <li>Solution architecture</li>
+                            <li>Technical leadership</li>
                         </ul>
                         <figure class="profile-photo">
                             <img src="assets/profile-portrait.webp" width="512" height="512" alt="Portrait of Uliumdzhi Uliumdzhiev">
@@ -1819,16 +1936,16 @@
 
         <section class="module-grid" id="work" aria-label="Core areas of work">
             <article class="module module-intro">
-                <span class="module-label">The work</span>
-                <h2>Systems people can actually use.</h2>
-                <p>Technical depth is only useful when it becomes a clear decision, workflow or product.</p>
+                <span class="module-label">Core capabilities</span>
+                <h2>From discovery to production delivery.</h2>
+                <p>I connect customer requirements, solution architecture, evaluation and cross-functional execution.</p>
                 <a class="module-link" href="#experience" aria-label="Explore experience">→</a>
             </article>
 
             <article class="module architecture-module">
-                <span class="module-label">Architecture</span>
-                <h3>From ambiguity to a system.</h3>
-                <p>Shape the boundaries, interfaces and delivery path before complexity takes over.</p>
+                <span class="module-label">Technical consulting</span>
+                <h3>Turn requirements into an executable system.</h3>
+                <p>Define scope, interfaces, risks, evaluation criteria and delivery plans with client and engineering teams.</p>
                 <div class="architecture-map" aria-hidden="true">
                     <span class="architecture-node">INPUT</span>
                     <span class="architecture-node">PLAN</span>
@@ -1838,9 +1955,9 @@
             </article>
 
             <article class="module agent-module">
-                <span class="module-label">Agent systems</span>
-                <h3>Agent systems with built-in observability.</h3>
-                <p>Agentic workflows, LLM evaluation and human expertise connected by design.</p>
+                <span class="module-label">AI engineering</span>
+                <h3>Build agentic systems with quality controls.</h3>
+                <p>Combine tool use, observability, LLM evaluation and human feedback for dependable production behavior.</p>
                 <div class="agent-console" aria-hidden="true">
                     <div class="console-head"><span>Agent runtime</span><span class="console-status">Live</span></div>
                     <div class="console-row"><span>researcher</span><span>reasoning</span></div>
@@ -1852,35 +1969,35 @@
 
         <section class="cases" id="cases">
             <div class="section-heading reveal">
-                <span class="section-index">00 / Selected cases</span>
+                <span class="section-index">00 / Selected projects</span>
                 <div>
-                    <h2>Selected work. Measurable results.</h2>
-                    <p>Selected client work, active product ownership and public case studies. Client names and results appear only when already disclosed.</p>
+                    <h2>Selected projects and outcomes.</h2>
+                    <p>Delivery examples spanning enterprise AI, evaluation, data operations, machine learning and product ownership.</p>
                 </div>
             </div>
 
             <div class="cases-grid reveal">
                 <article class="case-card case-tendem">
-                    <div class="case-meta"><span>HITL ownership · Tendem AI</span><span>Live now</span></div>
+                    <div class="case-meta"><span>Product ownership · Tendem AI</span><span>Live product</span></div>
                     <div class="tendem-layout">
                         <div class="tendem-copy">
-                            <h3>Owning the human layer behind a live AI product.</h3>
-                            <p>I currently own Tendem’s HITL layer, shaping both its product direction and technical architecture. Across multiple phases of this internal venture, the team has brought me back to turn expert operations, quality controls and delivery constraints into a live AI + human product.</p>
-                            <div class="case-stats" aria-label="Tendem ownership scope"><span>HITL owner</span><span>Product + tech</span><span>Active delivery</span></div>
+                            <h3>Human-in-the-loop operations for production AI.</h3>
+                            <p>Designed the Human-in-the-Loop (HITL) operating layer for Tendem: expert routing, quality controls, delivery metrics and feedback loops. I own the product direction and technical architecture connecting expert operations with the core system.</p>
+                            <div class="case-stats" aria-label="Tendem ownership scope"><span>Product owner</span><span>HITL architecture</span><span>Production</span></div>
                             <a class="case-source" href="https://tendem.ai/" target="_blank" rel="noopener noreferrer">Visit Tendem ↗</a>
                         </div>
                         <ul class="tendem-scope" aria-label="Tendem AI ownership areas">
-                            <li><span>01</span><strong>Product direction</strong><small>Defining what the human layer should solve.</small></li>
-                            <li><span>02</span><strong>HITL architecture</strong><small>Designing expert workflows and quality controls.</small></li>
-                            <li><span>03</span><strong>Live delivery</strong><small>Carrying ownership into the product in use today.</small></li>
+                            <li><span>01</span><strong>Workflow design</strong><small>Turning expert work into repeatable product operations.</small></li>
+                            <li><span>02</span><strong>Quality system</strong><small>Defining review, escalation and performance controls.</small></li>
+                            <li><span>03</span><strong>Product feedback</strong><small>Connecting operational signals to roadmap decisions.</small></li>
                         </ul>
                     </div>
                 </article>
 
                 <article class="case-card case-toloka">
-                    <div class="case-meta"><span>Solutions engineering · Toloka</span><span>2024 — now</span></div>
-                    <h3>Dozens of projects. Top-tier client teams.</h3>
-                    <p>I work directly with client engineering, product and operations teams—owning client communication, technical consulting and solution architecture from proof of concept through scaled delivery, with consistently positive feedback.</p>
+                    <div class="case-meta"><span>Solutions engineering · Toloka</span><span>2024 — present</span></div>
+                    <h3>Enterprise AI consulting across top-tier teams.</h3>
+                    <p>Led technical discovery and solution design across dozens of engagements, partnering with client engineering, product and operations teams. Scope includes proof-of-concepts, evaluation strategies, production architectures and scaled rollout.</p>
                     <div class="case-client-list" aria-label="Selected client teams and additional enterprise work">
                         <span>Amazon</span><span>Anthropic</span>
                         <span>JetBrains</span><span>Microsoft</span>
@@ -1891,7 +2008,7 @@
                 <article class="case-card case-shopify">
                     <div class="case-meta"><span>Commerce AI · Shopify</span><span>Public case</span></div>
                     <h3>22K+ product collections. Days to deliver at ≥95% accuracy.</h3>
-                    <p>Shopify needed high-quality labeled data despite noisy, user-generated inputs. I coordinated a 10-person cross-functional team of engineers and managers to map 22K+ product collections to a 10K+ taxonomy using vector RAG, structural tree search and targeted human review.</p>
+                    <p>Shopify needed high-quality labeled data despite noisy, user-generated inputs. I coordinated a 10-person cross-functional team of engineers and managers to map 22K+ product collections to a 10K+ taxonomy using retrieval-augmented generation (RAG), structural tree search and targeted human review.</p>
                     <div class="case-stats" aria-label="Shopify case scale and leadership"><span>22K+ product collections</span><span>10K+ categories</span><span>10-person team</span><span>Days-long deadline</span></div>
                     <a class="case-source" href="https://toloka.ai/blog/building-shopify-s-product-catalogue-at-ai-speed/" target="_blank" rel="noopener noreferrer">Read public case ↗</a>
                 </article>
@@ -1940,15 +2057,15 @@
                     <div class="case-stats" aria-label="Elbrus mentoring scope"><span>15 cohorts</span><span>27 projects</span><span>Applied AI</span></div>
                 </article>
             </div>
-            <p class="cases-note">* Toloka materials are public links attached to my LinkedIn experience. Kidskey figures describe platform scale, not attributed project uplift.</p>
+            <p class="cases-note">* Kidskey figures describe platform scale, not attributed project uplift.</p>
         </section>
 
         <section class="presence" id="presence" aria-labelledby="presence-title">
             <div class="section-heading reveal">
-                <span class="section-index">01 / Industry presence</span>
+                <span class="section-index">01 / Conferences</span>
                 <div>
-                    <h2 id="presence-title">Beyond the build.</h2>
-                    <p>Representing teams and staying close to the conversations shaping research, products and technical infrastructure.</p>
+                    <h2 id="presence-title">Conference representation.</h2>
+                    <p>Representing teams at major NLP and Web3 events while connecting research and industry conversations to product work.</p>
                 </div>
             </div>
 
@@ -1979,17 +2096,17 @@
 
         <section class="section" id="stack">
             <div class="section-heading reveal">
-                <span class="section-index">02 / Agent systems &amp; stack</span>
+                <span class="section-index">02 / Skills</span>
                 <div>
-                    <h2>A broad toolkit, applied with intent.</h2>
-                    <p>I combine proprietary and open-source agent harnesses with focused extensions and control patterns for reliable, observable delivery.</p>
+                    <h2>Technical skills.</h2>
+                    <p>A focused toolkit for AI architecture, machine learning, data engineering, cloud infrastructure and production delivery.</p>
                 </div>
             </div>
             <article class="agent-stack reveal">
                 <div>
-                    <span class="agent-stack-label">Agent systems · Daily practice</span>
-                    <h3>From coding agents to reliable multi-agent loops.</h3>
-                    <p>I extend coding agents with reusable capabilities and critic-driven evaluation, turning one-off runs into dependable engineering workflows.</p>
+                    <span class="agent-stack-label">Agentic engineering · Daily practice</span>
+                    <h3>Production workflows for coding and multi-agent systems.</h3>
+                    <p>Daily use of proprietary and open-source agent harnesses, reusable skills, tool integrations, critic loops and evaluator-driven orchestration.</p>
                 </div>
                 <div class="agent-stack-grid" aria-label="Agent systems toolkit">
                     <div class="agent-stack-item"><span>Proprietary harnesses</span><strong>Claude Code · Codex</strong></div>
@@ -2028,46 +2145,49 @@
 
         <section class="section" id="experience">
             <div class="section-heading reveal">
-                <span class="section-index">03 / Experience</span>
+                <span class="section-index">03 / Work experience</span>
                 <div>
-                    <h2>From field research to agentic systems.</h2>
-                    <p>A career built across disciplines: environmental science, analytics, education technology, ML products and solutions engineering.</p>
+                    <h2>Work experience.</h2>
+                    <p>Professional roles across solutions engineering, technical leadership, machine learning, data science and environmental analytics.</p>
                 </div>
             </div>
 
             <div class="experience-board reveal">
                 <article class="role role-current">
-                    <div class="role-period"><span>2024 — now</span><span class="role-status">Current role</span></div>
+                    <div class="role-period"><span>2024 — present</span><span class="role-status">Current role</span></div>
                     <h3>Senior Solutions Engineer &amp; Technical Team Lead</h3>
                     <a class="role-company" href="https://toloka.ai" target="_blank" rel="noopener noreferrer">Toloka ↗</a>
-                    <p>Shaping solution architecture and guiding the Solutions Engineering team. I also own the HITL layer for <a class="role-inline-link" href="https://tendem.ai/" target="_blank" rel="noopener noreferrer">Tendem AI ↗</a>, an internal venture where I bridge product direction, expert operations and technical delivery.</p>
+                    <p>Lead a Solutions Engineering team delivering enterprise AI programs across frontier models, e-commerce and developer tooling. Own technical discovery, architecture reviews, delivery planning and client communication.</p>
                     <ul class="impact-list">
-                        <li>Brought back across multiple phases to own HITL product decisions and technical architecture as Tendem evolved.</li>
-                        <li>Championing the integration and adoption of internal tools across the department.</li>
-                        <li>Building pipelines for agent systems, SFT, RLHF and evaluation.</li>
-                        <li>Implementing data strategies and expert-annotation workflows across industries.</li>
+                        <li>Coordinate cross-functional delivery across solutions engineers, data scientists, delivery managers and client teams.</li>
+                        <li>Translate customer requirements into proof-of-concepts, evaluation plans, production architectures and rollout decisions.</li>
+                        <li>Align engineering priorities and internal product development with customer and commercial objectives.</li>
+                        <li>Own the Human-in-the-Loop (HITL) product stream for <a class="role-inline-link" href="https://tendem.ai/" target="_blank" rel="noopener noreferrer">Tendem AI ↗</a>, combining expert operations, quality control and product strategy.</li>
+                        <li>Design and deliver expert-generated training and evaluation datasets used to develop frontier models, supporting Supervised Fine-Tuning (SFT), Reinforcement Learning from Human Feedback (RLHF) and large language model evaluation.</li>
                     </ul>
                 </article>
 
                 <article class="role role-kidskey">
                     <div class="role-period"><span>2023 — 2024</span><span>Full-time · Cyprus</span></div>
+                    <p class="role-leadership">Data &amp; ML Lead</p>
                     <h3>Machine Learning Engineer</h3>
                     <a class="role-company" href="https://kidskey.org/en" target="_blank" rel="noopener noreferrer">Kidskey ↗</a>
-                    <p>Led internal data-product development, deployed a retrieval-augmented support system and designed a multimodal recommendation product across video, audio and text.</p>
+                    <p>Owned the startup’s data and machine learning function, leading a cross-functional team of analysts, software engineers and ML engineers across product discovery, model prototyping, data pipelines, backend integration and stakeholder delivery for an international education platform.</p>
                 </article>
 
                 <article class="role role-iamfuture">
                     <div class="role-period"><span>2023 — 2024</span><span>Contract · Switzerland</span></div>
+                    <p class="role-leadership">Data &amp; ML Lead</p>
                     <h3>Machine Learning Engineer</h3>
                     <span class="role-company">IamFuture</span>
-                    <p>Led a data team and designed ML systems from PoC to MVP across crypto time series, NLP and machine-learning backend services.</p>
+                    <p>Owned data and ML delivery for the startup, leading a cross-functional team of analysts, software engineers and ML engineers from proof of concept to MVP across crypto time series, natural language processing (NLP) and backend services.</p>
                 </article>
 
                 <article class="role role-elbrus">
                     <div class="role-period"><span>2021 — 2023</span><span>Remote</span></div>
                     <h3>Data Scientist &amp; Mentor</h3>
                     <span class="role-company">Elbrus Coding Bootcamp</span>
-                    <p>Improved analytics for experimentation and marketing, developed an AI project as a Skolkovo participant and mentored more than 15 Data Science cohorts.</p>
+                    <p>Owned analytics and ML initiatives across experimentation, marketing and a Skolkovo-backed AI project; delivered technical mentorship across the Data Science program.</p>
                 </article>
 
                 <article class="role">
@@ -2079,20 +2199,36 @@
             </div>
 
             <div class="earlier reveal">
-                <p class="earlier-title">Earlier chapter</p>
+                <p class="earlier-title">Earlier experience</p>
                 <div class="earlier-row">
                     <time>2015 — 2016</time>
-                    <h3>Lead Environmental Consultant · Ecosky</h3>
+                    <div class="earlier-role">
+                        <h3>Lead Environmental Consultant</h3>
+                        <span class="earlier-company">Ecosky</span>
+                    </div>
                     <p>Led monitoring projects, developed analytical reports for multinational energy companies and provided GIS support.</p>
                 </div>
                 <div class="earlier-row">
                     <time>2014 — 2015</time>
-                    <h3>Junior Research Scientist · Dokuchaev Soil Science Institute</h3>
-                    <p>Applied classical ML and remote sensing to digital soil mapping and field research.</p>
+                    <div class="earlier-role">
+                        <h3>Junior Research Scientist</h3>
+                        <span class="earlier-company">Dokuchaev Soil Science Institute</span>
+                    </div>
+                    <div class="earlier-details">
+                        <p>Analyzed 2,000+ soil samples during a two-month field expedition from the Black Sea to the Caspian Sea. Developed remote-sensing soil-mapping workflows with QGIS, SAGA&nbsp;GIS, R, SVM and Random&nbsp;Forest. Optimized ICP-AES laboratory data processing.</p>
+                        <p class="conference-label">Participated in international conferences:</p>
+                        <ul class="earlier-highlights">
+                            <li>Third International Salinity Forum — Riverside, USA,&nbsp;2014</li>
+                            <li>Pedometrics 2015 — Córdoba, Spain</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="earlier-row">
                     <time>2012</time>
-                    <h3>Environmental Technician · Lomonosov MSU</h3>
+                    <div class="earlier-role">
+                        <h3>Environmental Technician</h3>
+                        <span class="earlier-company">Lomonosov Moscow State University</span>
+                    </div>
                     <p>Conducted fieldwork on industrial impact within conservation landscapes.</p>
                 </div>
             </div>
@@ -2102,13 +2238,16 @@
             <div class="section-heading reveal">
                 <span class="section-index">04 / Education</span>
                 <div>
-                    <h2>Science first. Engineering ever since.</h2>
+                    <h2>Education.</h2>
                 </div>
             </div>
             <div class="education-board reveal">
                 <article class="education-card">
                     <time>2009 — 2014</time>
-                    <h3>Lomonosov Moscow State University</h3>
+                    <h3 class="education-school-name">
+                        <span class="education-name-line">Lomonosov</span>
+                        <span class="education-name-line">Moscow State University</span>
+                    </h3>
                     <p>Specialist in Environmental and Natural Resource Management</p>
                     <p>Faculty of Geography · Landscape Geochemistry and Soil Geography</p>
                 </article>
@@ -2124,8 +2263,8 @@
         <section class="contact" id="contact">
             <div class="contact-content reveal">
                 <p class="eyebrow">Contact</p>
-                <h2>Let's make the complex useful.</h2>
-                <p>I'm always interested in thoughtful conversations about AI systems, data products, solution architecture and the teams that build them.</p>
+                <h2>Open to thoughtful conversations.</h2>
+                <p>About enterprise AI, solutions engineering leadership, product ownership and complex technical delivery.</p>
                 <div class="contact-links">
                     <a href="mailto:ulyumdzhiev@gmail.com">ulyumdzhiev@gmail.com ↗</a>
                     <a href="tel:+381692105734">+381 69 2105 734</a>
@@ -2138,7 +2277,7 @@
         <footer>
             <div class="footer-inner">
                 <span>© <span id="year">2026</span> Uliumdzhi Uliumdzhiev</span>
-                <span>Solutions engineering · Applied AI</span>
+                <span>Solutions engineering · Technical leadership</span>
                 <a href="#top">Back to top ↑</a>
             </div>
         </footer>
